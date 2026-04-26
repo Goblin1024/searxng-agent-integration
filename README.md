@@ -142,18 +142,18 @@ Built with enterprise-grade anti-detection mechanisms, this tool enables AI agen
 ```bash
 # Clone into Hermes Agent tools directory
 cd /path/to/hermes-agent/tools
-curl -L https://raw.githubusercontent.com/YOUR_USERNAME/searxng-agent-integration/main/searxng_integration.py -o searxng_integration.py
+curl -L https://raw.githubusercontent.com/Goblin1024/searxng-agent-integration/main/searxng_integration.py -o searxng_integration.py
 
 # Or clone full repository
 cd /path/to/hermes-agent/tools
-git clone https://github.com/YOUR_USERNAME/searxng-agent-integration.git searxng_integration
+git clone https://github.com/Goblin1024/searxng-agent-integration.git searxng_integration
 ```
 
 ### Method 2: Standalone Usage
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/searxng-agent-integration.git
+git clone https://github.com/Goblin1024/searxng-agent-integration.git
 cd searxng-agent-integration
 
 # Install dependencies
@@ -461,7 +461,7 @@ We welcome contributions! Here's how to get started:
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/searxng-agent-integration.git
+git clone https://github.com/Goblin1024/searxng-agent-integration.git
 cd searxng-agent-integration
 
 # Install dev dependencies
@@ -543,9 +543,9 @@ MIT License — see [LICENSE](LICENSE) file for details.
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/searxng-agent-integration/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/YOUR_USERNAME/searxng-agent-integration/discussions)
-- **Email**: your-email@example.com
+- **Issues**: [GitHub Issues](https://github.com/Goblin1024/searxng-agent-integration/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Goblin1024/searxng-agent-integration/discussions)
+- **Email**: goblin1024@example.com
 
 ---
 
@@ -554,7 +554,7 @@ MIT License — see [LICENSE](LICENSE) file for details.
 </p>
 
 <p align="center">
-  <a href="https://github.com/YOUR_USERNAME/searxng-agent-integration">⭐ Star us on GitHub</a> •
-  <a href="https://github.com/YOUR_USERNAME/searxng-agent-integration/fork">🍴 Fork</a> •
-  <a href="https://github.com/YOUR_USERNAME/searxng-agent-integration/issues">🐛 Report Bug</a>
+  <a href="https://github.com/Goblin1024/searxng-agent-integration">⭐ Star us on GitHub</a> •
+  <a href="https://github.com/Goblin1024/searxng-agent-integration/fork">🍴 Fork</a> •
+  <a href="https://github.com/Goblin1024/searxng-agent-integration/issues">🐛 Report Bug</a>
 </p>
