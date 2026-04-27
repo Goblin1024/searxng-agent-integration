@@ -558,3 +558,59 @@ MIT License — see [LICENSE](LICENSE) file for details.
   <a href="https://github.com/Goblin1024/searxng-agent-integration/fork">🍴 Fork</a> •
   <a href="https://github.com/Goblin1024/searxng-agent-integration/issues">🐛 Report Bug</a>
 </p>
+
+---
+
+## 🆕 v2.0 新特性：自动回退集成
+
+### 深度集成到 web_search
+
+从 v2.0 开始，SearXNG 不再只是独立的 `searxng_search` 工具，而是深度集成到 Hermes Agent 的 `web_search` 工具中：
+
+- **自动回退**: 当 Firecrawl/Parallel/Exa/Tavily 用完额度或不可用时，自动切换到 SearXNG
+- **零配置**: 用户无需更改任何使用方式，`web_search` 始终可用
+- **透明体验**: 用户完全感知不到后端切换
+
+### 安装方式（推荐）
+
+不再需要将 `searxng_search` 作为独立工具使用，而是直接修改 `web_tools.py`：
+
+```bash
+# 1. 复制 SearXNG 集成文件
+cp searxng_integration.py /path/to/hermes-agent/tools/
+
+# 2. 按照 INSTALL.md 修改 web_tools.py
+# 主要修改：
+# - Firecrawl 延迟导入
+# - check_web_api_key() 始终返回 True
+# - web_search_tool() 异常处理添加 SearXNG 回退
+
+# 3. 重启 Hermes
+hermes
+```
+
+详细步骤见 [INSTALL.md](INSTALL.md)
+
+### 回退流程
+
+```
+用户: 搜索 Python 教程
+
+Hermes: 
+  1. 尝试 Firecrawl → 429 Too Many Requests (额度用完)
+  2. 捕获异常
+  3. 自动调用 SearXNG
+  4. 返回免费搜索结果
+  
+用户: 看到搜索结果（完全无感知）
+```
+
+### 优势对比
+
+| 方式 | v1.0 (独立工具) | v2.0 (自动回退) |
+|------|----------------|----------------|
+| 使用方式 | `/tool searxng_search` | 正常使用 `web_search` |
+| 用户体验 | 需要学习新工具 | 完全透明 |
+| 回退触发 | 手动选择 | 自动 |
+| 集成深度 | 浅层 | 深层 |
+
